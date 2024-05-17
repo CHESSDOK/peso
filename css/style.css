@@ -1,8 +1,7 @@
 body {
 	margin: 0;
 	opacity: 1;
-	font-family: system-ui;
-	
+	font-family: system-ui;	
 }
 .fade-in {
 	opacity: 0; /* Set opacity to 0 when the fade-out class is applied */
@@ -111,6 +110,7 @@ nav {
 
 .burger {
 	cursor: pointer;
+	margin-left: 5vw;
 }
 
 
@@ -120,7 +120,7 @@ nav {
 	padding: 8px 16px;
 	border: 1px solid #333;
 	border-radius: 5px;
-	margin-right:4vw;
+	margin-right:5vw;
 }
 
 .content {
@@ -200,7 +200,7 @@ button {
 	overflow: hidden;
 	cursor: pointer;
 	font-size: 15px;
-	margin-right: 3vw;
+	margin-right: 5vw;
 	z-index: 1;
 	color: #EBEEF1;
 	border: 2px solid var(--color);
@@ -237,14 +237,15 @@ button {
 .container {
 	background-color: rgba(255, 255, 255, 0.8);
 	width: auto;
+	height: 70vh;
 	border: 1px solid #ccc;
-	margin-top: 15vh;
+	margin-top: 10vh;
 	position: center;
 }
 
 .content {
     margin-top: -5vh;
-    max-height: 660px;
+    max-height: 460px;
     overflow: hidden;
 }
 
@@ -262,11 +263,11 @@ button {
 /* Individual classes */
 .label1 {
 	font-size: 96px;
-	margin-left: -10vw;
+	margin-left: -11vw;
 	color: #0027CB;
 	text-shadow: var(--shadow);
 	font-weight: 700;
-	line-height: 6rem;
+	line-height: 2rem;
 }
 
 .label2 {
@@ -290,7 +291,7 @@ button {
 	line-height: 5rem;
 	color: #333;
 	font-size: 85px;
-	margin-left: 2vw;
+	margin-left: 6.9vw;
 	text-decoration: underline;
 	text-decoration-color: #900B0E;
 	text-underline-offset: 0.2em;
@@ -303,24 +304,30 @@ button {
 	font-weight: 600;
 	color: #333;
 	font-size: 40px;
-	margin-left: 1vw;
+	margin-left: 5vw;
 }
 
 .label6 {
 	font-size: 15px;
-	margin-left: -23vw;
+	margin-left: -31vw;
 	margin-top:-20vh;
-	width: 6vw;
+	width: 7vw;
 	border-radius: 25px;
 }
 
-.label7, .label8, .label9 {
+.label7 {
 	font-weight: 400;
 	font-size: 14px;
-	margin-left: 8vw;
+	margin-left: 15vw;
 	letter-spacing: 1px;
 }
 
+.label8 {
+	font-weight: 400;
+	font-size: 14px;
+	margin-left: 13vw;
+	letter-spacing: 1px;
+}
 .label9 {
 	font-weight: 400;
 	font-size: 14px;

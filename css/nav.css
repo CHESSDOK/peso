@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	opacity: 1;
 	font-family: system-ui;
+	background-color:#EBEEF1 ;
 }
 
 .fade-in {
