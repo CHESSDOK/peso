@@ -1,92 +1,87 @@
-.h1 {
+.header-container {
     width: 100%;
-    background: linear-gradient(90deg, #900B0E, #2A0304);
-    padding: 50px 0;
     text-align: center;
-    color: white;
-    margin-top:-1vh;
+    background-color: #fff;
+    padding: 20px 0;
 }
-.h2 {
-    width: 100%;
-    margin-top: -10vh;
-    text-align: center;  
-    font-size: 1em;
-    color: #fff;
-    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+.header-title {
+    margin: 0;
+    color:#E3C926;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
-.content {
+.sub-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    background-color: #fff;
 }
-
-.text-section {
-    width: 60%;
-    height: 70vh; /* Set a fixed height */
-    margin-top: 8vh;
-    overflow: auto; /* Enable scrolling */
-}
-
-    .text-section h3 {
-        margin-top: 0;
-        text-align: center;
-        margin-left: 10vw;
-        margin-top: 3vhs;
-        font-size: 2.5em;
-    }
-
-    .text-section p {
-        margin-bottom: 20px;
-        text-align: center;
-        margin-left: 10vw;
-        letter-spacing: 2px;
-        font-size: 1.5em;
-        line-height: 1.5rem;
-        font-weight: 600;
-        color: #333;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-.image-section {
-    width: 55%;
+.sub-header-text,
+.sub-header-logo-container {
+    flex: 1;
+    width: 50%;
     text-align: center;
 }
-
-    .image-section img {
-        max-width: 100%;
-        width:500px;
-        height: auto;
-    }
- 
-        .text-section-2 h3 {
-            margin-top: 0;
-            text-align: center;
-            margin-left: 10vw;
-            margin-top: 3vhs;
-            font-size: 2.5em;
-        }
-    
-        .text-section-2 p {
-            margin-bottom: 20px;
-            text-align: center;
-            margin-left: 10vw;
-            letter-spacing: 2px;
-            font-size: 1.5em;
-            line-height: 1.5rem;
-            font-weight: 600;
-            color: #333;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
+.sub-header-text {
+    font-size: 1.2rem;
+    padding-left:15vw;
+}
+.sub-header-logo {
+    max-width: 50%;
+    height: auto;
+    margin-right: 10vw;
+}
 
 hr {
     border: none;
-    border-top: 2px solid #000;
+    border-top: 3px solid rgba(0, 0, 0, 0.8);
     margin: 0;
-    margin-bottom:2vh;
 }
 
+.header-2, .header-3 {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.header-t2 {
+    color:#E3C926;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.header-t3 {
+    color:#333;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.header-2  p {
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 1em;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.header-3 .h3p{
+    text-align: center;
+    font-size: 1.3em;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+.header-3 p {
+    color: rgba(51,51,51, 0.8);
+    letter-spacing: 2px;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.1em;
+}
 /* about image scroll*/
 .h3 {
     width: 100%;
@@ -131,4 +126,47 @@ hr {
     margin: 5px 0 0;
     font-size: 1em;
     color: #666;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.principle-container {
+    margin-top:-20vh;
+    display: flex;
+    text-align: center;
+    width: 85%;
+    max-width: 1200px;
+    max-height: 700px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.8);
+}
+.section {
+    color: rgba(51,51,51, 0.8);
+    letter-spacing: 2px;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.section-box {
+    line-height: 30px;
+}
+.section-box1 {
+    line-height: 50px;
+}
+.section img {
+    display: block;
+    max-width: 120px; /* Adjust the size as needed */
+    margin: 0 auto 50px;
+}
+.divider {
+    width: 2px;
+    background-color: #ddd;
 }

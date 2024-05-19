@@ -5,19 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us Page</title>
     <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/nav_float.css">
 </head>
-<style>
-body::before{
-    background-image:none;
-    background-color:#EBEEF1;
-    }
-</style>
 <body>
-
     <!-- Navigation -->
-
     <nav>
         <div class="logo">
             <img src="../img/logo_peso.png" alt="Logo">
@@ -42,34 +33,67 @@ body::before{
         </div>
     </nav>
 
-    <header>
+    <div class="header">
         <h1 class="h1">About Us</h1>
-        <h1 class="h2">City Government of Los Baños Public Employment Service Office (PESO)</h1>
-    </header>
-    <!-- Body -->
-    <section class="content">
-        <div class="text-section">
-            <h3>Mandate</h3>
-            <p>Our mandate is not a rulebook; it's a manifesto of daring dreams and audacious aspirations that challenge the status quo and dance on the edge of imagination.</p>
-            <p>PESO is a conduit of the Department of Labor and Employment in the implementation of employment facilitation programs in the locality.</p>
-            <h3>Mission</h3>
-            <p>To promote gainful employment by ensuring prompt, timely, and efficient delivery of full-cycle employment facilitation services.</p>
-            <h3>Vision</h3>
-            <p>A decent job for at least one member of Tacurongnon household.</p>
-            <h3>Core Values</h3>
-            <p>
-                Passion<br><br>
-                Empathy<br><br>
-                Social Responsibility<br><br>
-                Open - Mindedness
-            </p>
-        </div>
-        <div class="image-section">
-            <img src="../img/logo_peso.png" alt="Logo">
-        </div>
-    </section>
-    <hr> <!-- about image scroll--> 
+    </div>
     
+    <div class="header-container">
+        <h1 class="header-title">City Government of Los Baños Public Employment Service Office (PESO)</h1>
+    </div>
+    <div class="sub-header">
+        <div class="sub-header-text">
+            <div class="section">
+                <h2>Mandate</h2>
+                <p>A Public Employment Service Office (PESO) is a non-fee charging multi-service provider established or accredited pursuant to Republic Act 8759 otherwise known as the PESO Act of 1999, as amended by Republic Act 10691.</p>
+                <p>PESO is a conduit of the Department of Labor and Employment in the implementation of employment facilitation programs in the locality.</p>
+            </div>
+        </div>
+        <div class="sub-header-logo-container">
+            <img src="../img/logo_peso.png" alt="PESO Logo" class="sub-header-logo">
+        </div>
+    </div>
+    <!-- Body -->
+    <div class="wrapper">
+        <div class="principle-container">
+            <div class="section">
+                <img src="../img/mission.png" alt="Mission Logo">
+                <hr>
+                <h2>Mission</h2>
+                <p class="section-box">To promote gainful employment by ensuring prompt, timely, and efficient delivery of full-cycle employment facilitation services.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <img src="../img/vision.png" alt="Vision Logo">
+                <hr>
+                <h2>Vision</h2>
+                <p class="section-box">A decent job for at least one member of Tacurongnon household.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <img src="../img/values.png" alt="Values Logo">
+                <hr>
+                <h2>Values</h2>
+                <p class="section-box1">Passion<br>Empathy<br>Social Responsibility<br>Open - Mindedness</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="header-2">
+        <h1 class="header-t2">Organizational Outcome</h1>
+        <p>Gainful employment for Tacurong City’s labor force.</p>
+    </div>
+    <hr> 
+    <div class="header-3">
+        <h1 class="header-t3">Objectives</h1>
+        <p class="h3p">Citing provisions of RA 10691, the LGU Tacurong PESO shall ensure prompt, timely, and efficient delivery of full-cycle employment facilitation services. Towards this end, it shall:</p>
+        <p>1. Provide a venue where clients could avail simultaneously various employment services, such as LMI, referrals, training, and entrepreneurial, reintegration, and other services;</p>
+        <p>2. Serve as referral and Information center for the DOLE and other government agencies by making available data and information on their respective programs;</p>
+        <p>3. Provide clients with adequate information for the DOLE and other government agencies by making available data and information on their respective programs;</p>
+        <p>4. Provide clients with adequate information on employment and the labor market situation; and</p>
+        <p>5. Establish linkages with other PESOs for job exchange and other employment–related services. The PESO shall also provide information on other DOLE programs.</p>
+    </div>
+    <hr>
+    <!-- about image --> 
     <h1 class="h3">Officers</h1>
     <div id="image-container-module">
         <div class="image-item">
@@ -108,19 +132,6 @@ body::before{
             </div>
         </div>
     </div>
-    <hr>
-    <section class="content">
-    <div class="text-section-2">
-    <h3>Clients of PESO</h3>
-    <p>Jobseekers | Employer</p>
-    <p>OFWs  | Researchers</p>
-    <p>Students | Returning</p>
-    <p>Marginalized groups of workers who seek the services of PESO</p>
-    <p>Other persons or organizations engaged in Employment Promotion Program</p>
-    </div>
-    </section>
-    <hr>
-
 
     <script src="../javascript/script.js"></script> <!-- You can link your JavaScript file here if needed -->
 </body>
