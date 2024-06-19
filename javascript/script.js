@@ -38,7 +38,7 @@ document.getElementById("loginButton").addEventListener("click", function (event
 
     // Change the URL after the transition ends
     setTimeout(function () {
-        window.location.href = "html/login.html";
+        window.location.href = "html/login.php";
     }, 300); // Adjust the delay according to your transition duration
 
     // Adding the class to initiate the fade-in and slide-up animation
@@ -50,7 +50,7 @@ document.getElementById("signup").addEventListener("click", function (event) {
 
     // Change the URL after the transition ends
     setTimeout(function () {
-        window.location.href = "../html/register.html";
+        window.location.href = "../html/register.php";
     }, 300); // Adjust the delay according to your transition duration
 
     // Adding the class to initiate the fade-in and slide-up animation
