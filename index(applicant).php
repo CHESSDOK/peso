@@ -1,13 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 session_start();
-if (!isset($_SESSION['id']) || $_SESSION['usertype'] != 'Applicant') {
-    header("Location: html/login.php");
-    exit();
+
+// Assuming you have a session variable that holds the user type
+$user = $_SESSION['usertype'];
+
+if ($user == 'Applicant') {
+    include 'nav_user.php';
+} elseif ($user == 'Employer') {
+    include 'nav_employer.php';
+} elseif ($user == 'OFW') {
+    header ("Location: html/adminver.php");
+} else {
+    // Handle case where user type is unknown or not set
+    echo 'User type not recognized';
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,34 +25,6 @@ if (!isset($_SESSION['id']) || $_SESSION['usertype'] != 'Applicant') {
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Navigation -->
-
-    <nav>
-        <div class="logo">
-            <img src="img/logo_peso.png" alt="Logo">
-            <a href="#"> PESO-lb.ph</a>
-        </div>
-        <label class="burger" for="burger">
-            <input type="checkbox" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <ul class="menu">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="html/about.html">About Us</a></li>
-            <li><a href="html/applicant.html">Applicant</a></li>
-            <li><a href="html/employer.html">Employer</a></li>
-            <li><a href="html/services.html">Services</a></li>
-            <li><a href="html/contact.html">Contact</a></li>
-        </ul>
-        <div class="auth">
-            <button id ="loginButton">For editing</button>
-        </div>
-    </nav>
-
-    <!-- Body -->
 
     <div class="container">
         <div class="content">

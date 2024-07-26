@@ -16,16 +16,8 @@ $sql = "SELECT * FROM register WHERE email='$email'";
             if ($user['is_verified'] == 1) {
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['usertype'] = $user['usertype'];
-
-                if ($user['usertype'] == 'Applicant') {
-                    header("Location: ../indexuser.php");
-                } elseif ($user['usertype'] == 'Employer') {
-                    header("Location: employer_dashboard.php");
-                } elseif ($user['usertype'] == 'OFW') {
-                    header("Location: ofw_dashboard.php");
-                } else {
-                    echo "Invalid user type.";
-                }
+                
+                 header ("Location: ../index(applicant).php");
             } else {
                 echo "<script>alert('Please verify your email before logging in.');</script>";
             }

@@ -1,11 +1,11 @@
 <?php
 include 'conn_db.php';
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
- 
-    //Load Composer's autoloader
-    require 'mailer/vendor/autoload.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader
+require 'mailer/vendor/autoload.php';
 
 function sendVerificationEmail($email, $token) {
     $mail = new PHPMailer(true);
@@ -26,7 +26,7 @@ function sendVerificationEmail($email, $token) {
         // Content
         $mail->isHTML(true);
         $mail->Subject = 'Email Verification';
-        $mail->Body = 'Click on the link to verify your email: <a href="localhost/peso/php/verify.php?token=' . $token . '">Verify Email</a>';
+        $mail->Body = 'Click on the link to verify your email: <a href="http://localhost/peso/php/verify.php?token=' . $token . '">Verify Email</a>';
 
         $mail->send();
         echo 'Verification email has been sent.';
@@ -46,8 +46,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO register (Fname, Lname, email, password, usertype, token, is_verified) VALUES ('$firstname', '$lastname', '$email', '$password', '$user_type', '$token', 0)";
 
     if ($conn->query($sql) === TRUE) {
-        sendVerificationEmail($email, $token);
-        echo "Registration successful! Please verify your email.";
+        $last_id = $conn->insert_id;
+
+        if ($user_type == 'Employer') {
+            $sql = "INSERT INTO employer_profile (user_id) VALUES ('$last_id')";
+        } elseif ($user_type == 'Applicant') {
+            $sql = "INSERT INTO applicant_profile (user_id) VALUES ('$last_id')";
+        } elseif ($user_type == 'Admin') {
+            $sql = "INSERT INTO admin_profile (user_id) VALUES ('$last_id')";
+        }
+
+        if ($conn->query($sql) === TRUE) {
+            sendVerificationEmail($email, $token);
+            echo "Registration successful! Please verify your email.";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
